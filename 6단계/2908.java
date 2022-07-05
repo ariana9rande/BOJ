@@ -25,7 +25,7 @@ public class Main
         if(new_a.compareTo(new_b) > 0)
         	bw.write(new_a + "");
         else
-        	bw.write(new_b + "");;
+        	bw.write(new_b + "");
         bw.flush();
         
     }
