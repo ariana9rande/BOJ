@@ -11,16 +11,27 @@ public class Main
         String str = fr.nextLine();
         //좌우 공백 제거
         str = str.trim();
-        int count = 0;
-        //공백 개수 세기
-        for(int i = 0; i < str.length(); i++)
+        
+        //입력값에 단어가 없을 경우
+        if(str.length() == 0)
         {
-        	if(str.charAt(i) == ' ')
-        		count++;
+        	bw.write(0 + "");
+        	bw.flush();
         }
-        //단어 개수 = 공백 개수 + 1이므로 1 더해서 출력
-        bw.write(count + 1 + "");
-        bw.flush();
+        else
+        {
+        
+        	int count = 0;
+        	//공백 개수 세기
+        	for(int i = 0; i < str.length(); i++)
+        	{
+        		if(str.charAt(i) == ' ')
+        			count++;
+        	}
+        	//단어 개수 = 공백 개수 + 1이므로 1 더해서 출력
+        	bw.write(count + 1 + "");
+        	bw.flush();
+        }
     }
     
     public static class FastReader {
