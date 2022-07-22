@@ -14,7 +14,7 @@ public class Main
         
         int count = 0;
         
-        //v에 도달하면 -b를 할 필요가 없으니 v - b를 목표로 잡고 a - b로 나눔. (v - b) % (a - b) != 0일 경우 올림
+        //v에 도달한 날에도 내려간 것으로 가정하여 v - b를 목표로 잡고 a - b로 나눔. (v - b) % (a - b) != 0일 경우 올림
         count = (int)(Math.ceil((double)(v - b) / (a - b)));
         //v - a에 도달하면 다음날 a를 올라가면서 v에 도달하게 되므로 v - a를 목표로 잡고 결과값에 1을 더함. 마찬가지로 나머지가 있을 경우 올림
         //count = (int)(Math.ceil((double)(v - a) / (a - b)) + 1);
